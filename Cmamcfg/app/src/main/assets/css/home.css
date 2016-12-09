@@ -1,0 +1,121 @@
+body {
+  background-color: white;
+}
+.theme{
+  color:#5F9EA0;
+}
+/* navigation bar css */
+.navbar-custom {
+    background-color: #5F9EA0;
+    margin-bottom: 0;
+    border-radius: 0;
+    letter-spacing: 4px ;
+    border-bottom:none;
+    box-shadow:none;
+    font-size: 15px ;
+}
+
+.nav.navbar-nav li a {
+    color:white;
+
+
+}
+.navbar-default .navbar-brand{
+    color:white;
+}
+
+.navbar-default .navbar-brand:hover {
+    background-color: transparent;
+    color: white;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #5F9EA0 !important;
+      background-color: #fff !important;
+  }
+
+#top1{
+  padding-bottom: 0px;
+}
+/* jumbotron css */
+.jumbotron-custom {
+    background-color: #5F9EA0 ;
+    padding: 100px 25px;
+    color: white;
+}
+/* glyphicon css */
+.logo {
+      color: #5F9EA0 ;
+      font-size: 150px;
+      padding-top: 80px;
+  }
+/* container css */
+.container-fluid{
+  padding: 0 0 40px 40px ;
+}
+/* slide anim css */
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+}
+/* contact box */
+#contact {
+  padding-bottom: 80px;
+}
+/* group page */
+#grp {
+  list-style-type: none;
+  color: #5F9EA0 ;
+}
+
+#grp li a:hover{
+  color: black;
+  text-decoration: none;
+}
+#grp li a{
+  color:#5F9EA0;
+
+}
+/* username sign up box */
+#usr{
+
+	border:3px #CCC solid;
+}

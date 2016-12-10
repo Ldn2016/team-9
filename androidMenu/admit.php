@@ -56,11 +56,45 @@
                             <option value="d"> Relapse (d)</option>
                           </select>
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
                       </form>
                  </div>
              </div>
       </div>
+      <script>
+		  function sendData(){
+
+     // var xhr = new ( window.ActiveXObject || XMLHttpRequest )( "Microsoft.XMLHTTP" );
+     // var url = "http://178.62.43.189/process_files.php"
+    var discharge = 1;
+    var admission = 0;
+    var date = 2016-12;
+    var age = document.getElementById("age");
+    var diagnosis = document.getElementById("diagnosis");
+    var clinic_name = document.getElementById("clinic_name");
+
+    var data = new Array();
+    data[0] = 0;
+    data[1] = "w";
+    data[2] = "2016";
+    data[3] = 1;
+    data[4] = "F";
+    data[5] = 1;
+
+    
+//      data = new FormData();
+//      data.append("file",datafile,"file.txt");
+     $.ajax({
+    url: 'insertVar.php',
+    data: data,
+    type: 'POST',
+    success: function(msg){
+     alert("Data sent successfully");
+   }
+    });
+
+}
+		 </script>
+      <button class="btn btn-default" onclick="sendData()">Submit</button>
     <script>
 
     <footer class="container-fluid text-center">

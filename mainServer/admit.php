@@ -85,9 +85,10 @@
 //      data = new FormData();
 //      data.append("file",datafile,"file.txt");
      $.ajax({
-    url: 'insertVar.php',
-    data: data,
-    type: 'POST',
+    url: 'http://178.62.43.189/mainServer/insert.php',
+    dataType: 'jsonp',  //use jsonp data type in order to perform cross domain ajax
+    crossDomain: true,
+    data: {v0: data[0], v1: data[1], v2: data[2], v3: data[3], v4: data[4],v5: data[5]},
     success: function(msg){
      alert("Data sent successfully");
    }
@@ -96,7 +97,6 @@
 }
 		 </script>
       <button class="btn btn-default" onclick="sendData()">Submit</button>
-    <script>
 
     <footer class="container-fluid text-center">
             <a href="#top" title="To Top">

@@ -1,0 +1,48 @@
+/*!
+ * Start Bootstrap - Modern Business (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+	margin-top: 50px;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    border-radius: 8px;
+}
+
+.table
+{
+	background-color: #f6f6f6;
+	color: black;
+	font-size: 20px;
+	border-radius: 8px;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+/* Custom panels */
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #ccf4f9;
+    color: black;
+}

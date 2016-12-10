@@ -50,17 +50,16 @@ function sendData(){
     data[5] = reason;
 
     
-    //  data = new FormData();
-    //  data.append("file",datafile,"file.txt");
-    //  $.ajax({
-    // url: 'http://178.62.43.189/',
-    // data: data,
-    // type: 'POST',
-    // // THIS MUST BE DONE FOR FILE UPLOADING
-    //         contentType: false,
-    //         processData: false,
-    // // ... Other options like success and etc
-    // })
+//      data = new FormData();
+//      data.append("file",datafile,"file.txt");
+     $.ajax({
+    url: 'http://178.62.43.189/insert.php',
+    data: data,
+    type: 'POST',
+    success: function(msg){
+     alert("Data sent successfully");
+   }
+    });
      // xhr.open( "POST", url);
      // data = new FormData();
      // data.append(datafile,file);

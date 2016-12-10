@@ -9,38 +9,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="main.php">Sorc278's Cloud Host</a>
+            <a class="navbar-brand" href="main.php">CMAM</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="submit.php">Submit</a>
+					<a href="index.php">Graphs</a>
                 </li>
-				<li>
-					<p>Posts</p>
-                </li>
-				<li class="bigLetter">
-					<a href="posts.php?board=1">S</a>
-                </li>
-				<li class="bigLetter">
-					<a href="posts.php?board=2">G</a>
-                </li>
-				<li class="bigLetter">
-					<a href="posts.php?board=3">R</a>
-                </li>
-				<li>
-					<a href="tasks.php">Tasks</a>
-                </li>
-				<li>
-					<a href="queue.php">Queue</a>
-                </li>
-				<li>
-					<a href="profile.php">Profile</a>
-                </li>
-				<li>
-					<a href='logout.php'>Log out</a>
-				</li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

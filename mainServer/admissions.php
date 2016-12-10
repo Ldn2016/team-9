@@ -69,6 +69,7 @@
     </script>
   </head>
   <body>
+	  <?php include "layout/nav.php"; ?>
 	  <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">

@@ -73,6 +73,14 @@
         chart.draw(data, options);
       }
     </script>
+    <script>
+	function setToXLS(){
+		document.getElementById("queryForm").setAttribute('action', 'performanceExcel.php');
+	}
+	function setToP(){
+		document.getElementById("queryForm").setAttribute('action', 'performance.php');
+	}
+	</script>
   </head>
   <body>
 	  <?php include "layout/nav.php"; ?>
@@ -99,20 +107,8 @@
                             <input type="radio" name="age" value="1"> <strong> < 6 months </strong>
                             <input type="radio" name="age" value="0"> <strong> Any </strong>
                         </div>
-						<!--<div class="control-group form-group">
-							<div class="controls">
-								<label>Password</label>
-								<input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your Password.">
-							</div>
-						</div>
-						<div class="control-group form-group">
-							<div class="controls">
-								<label>Retype Password</label>
-								<input type="password" class="form-control" id="password_re" name="passwordVerify" required data-validation-required-message="Please retype your Password.">
-							</div>
-						</div>
-						<div id="success"></div>-->
-						<input type="submit" value="Query" class="btn btn-primary"></button>
+						<input onclick="setToP()" type="submit" value="Query" class="btn btn-primary"></button>
+						<input onclick="setToXLS()" type="submit" value="Download .xls" class="btn btn-primary"></button>
 					</form>
 				</div>
 			</div>

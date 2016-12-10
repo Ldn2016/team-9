@@ -93,19 +93,6 @@
                             <input type="radio" name="age" value="1"> <strong> < 6 months </strong>
                             <input type="radio" name="age" value="0"> <strong> Any </strong>
                         </div>
-						<!--<div class="control-group form-group">
-							<div class="controls">
-								<label>Password</label>
-								<input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your Password.">
-							</div>
-						</div>
-						<div class="control-group form-group">
-							<div class="controls">
-								<label>Retype Password</label>
-								<input type="password" class="form-control" id="password_re" name="passwordVerify" required data-validation-required-message="Please retype your Password.">
-							</div>
-						</div>
-						<div id="success"></div>-->
 						<input type="submit" value="Query" class="btn btn-primary"></button>
 					</form>
 				</div>

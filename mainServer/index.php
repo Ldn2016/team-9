@@ -22,10 +22,24 @@
 				$sql_start="SELECT YEAR(disDate) as y, MONTH(disDate) as m,count(*) as t, sum(case when reason=0 then 1 else 0 end) as recovered,sum(case when reason=1 then 1 else 0 end) as defaulted,sum(case when reason=2 then 1 else 0 end) as dead FROM discharges ";
 				$sql_end=" GROUP BY YEAR(disDate), MONTH(disDate) ORDER BY disDate";
 				
-				if(!empty($_GET['siteName']))
+				if(!empty($_GET['siteName']) && !empty($_GET['age']))
+				{
+					$stmt = $conn->prepare($sql_start."WHERE siteName=? AND ageGroup=?".$sql_end);
+					$age=$_GET['age']-1;
+					$stmt->bind_param("si", $_GET['siteName'], $age);
+					$stmt->execute();
+				}
+				else if(!empty($_GET['siteName']))
 				{
 					$stmt = $conn->prepare($sql_start."WHERE siteName=?".$sql_end);
 					$stmt->bind_param("s", $_GET['siteName']);
+					$stmt->execute();
+				}
+				else if(!empty($_GET['age']))
+				{
+					$stmt = $conn->prepare($sql_start."WHERE ageGroup=?".$sql_end);
+					$age=$_GET['age']-1;
+					$stmt->bind_param("i", $age);
 					$stmt->execute();
 				}
 				else
@@ -78,14 +92,13 @@
 								<input type="text" class="form-control" id="siteName" name="siteName">
 							</div>
 						</div>
+						<div class="form-group">
+                          <label>Age:</label>
+                            <input type="radio" name="age" value="2"><strong> > 6 months </strong>
+                            <input type="radio" name="age" value="1"> <strong> < 6 months </strong>
+                            <input type="radio" name="age" value="0"> <strong> Any </strong>
+                        </div>
 						<!--<div class="control-group form-group">
-							<div class="controls">
-								<label>Choose your username</label>
-								<input type="text" class="form-control" id="username" name="username" required data-validation-required-message="Please enter your Username.">
-								<p class="help-block"></p>
-							</div>
-						</div>
-						<div class="control-group form-group">
 							<div class="controls">
 								<label>Password</label>
 								<input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your Password.">

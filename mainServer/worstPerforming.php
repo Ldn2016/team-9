@@ -22,23 +22,18 @@
 							
 							$conn = getConnection();
 							
-							if(!empty($_GET['month']))$month="01"
-							$year = $_GET['year']."-".$_GET['month']."-01 00:00:00";
+							if(!empty($_GET['month']))$month=$_GET['month'];
+							else $month="01";
+							$year = $_GET['year']."-".$month"-01 00:00:00";
 							
 							$sql_start="SELECT siteName, count(*) as t, sum(case when reason=0 then 1 else 0 end) as recovered,sum(case when reason=1 then 1 else 0 end) as defaulted,sum(case when reason=2 then 1 else 0 end) as dead FROM discharges ";
 							$sql_end=" GROUP BY siteName ORDER BY (recovered/t)";
 							
-							if(!empty($_GET['year']) && !empty($_GET['age']))
+							if(!empty($_GET['month']) && !empty($_GET['age']))
 							{
-								$stmt = $conn->prepare($sql_start."WHERE siteName=? AND ageGroup=?".$sql_end);
+								$stmt = $conn->prepare($sql_start."WHERE YEAR(disTime)=? AND MONTH(disTime)=? AND ageGroup=?".$sql_end);
 								$age=$_GET['age']-1;
-								$stmt->bind_param("si", $_GET['siteName'], $age);
-								$stmt->execute();
-							}
-							else if(!empty($_GET['siteName']))
-							{
-								$stmt = $conn->prepare($sql_start."WHERE siteName=?".$sql_end);
-								$stmt->bind_param("s", $_GET['siteName']);
+								$stmt->bind_param("ssi", $_GET['siteName'], $age);
 								$stmt->execute();
 							}
 							else if(!empty($_GET['age']))

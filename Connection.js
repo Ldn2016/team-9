@@ -1,35 +1,4 @@
-// function sendToServer(){
-	  
-// 	var xhr = new ( window.ActiveXObject || XMLHttpRequest )( "Microsoft.XMLHTTP" );
-// 	var url = "52.213.52.212/temp/process_files.php"
-	
 
-// 	var datafile = "file.txt"
-// 	xhr.open( "POST", url);
-// 	data = new FormData();
-// 	data.append(datafile,file);
-// 	try {
-// 	    xhr.send(data);
-// 	    string = "Connected";
-// 	  } catch (error) {
-// 	     string = "Not connected";
-// 	  }
-
-// }
-
-// function sendData(){ //Processes form data without use of a local file
-// 	var formData = document.getElementById("form1");
-	
-// 	$.ajax({
-//  		  type: "POST",
-//  		  data: {data:formData.element},
-//    		url: "http://178.62.43.189/processdata.php",
-//   		 success: function(msg){
-//    			  alert("Data received by server");
-//  	 	 }
-// 	});
-	
-// }
 function sendData(){
 
      // var xhr = new ( window.ActiveXObject || XMLHttpRequest )( "Microsoft.XMLHTTP" );
@@ -53,23 +22,13 @@ function sendData(){
 //      data = new FormData();
 //      data.append("file",datafile,"file.txt");
      $.ajax({
-    url: 'http://178.62.43.189/insert.php',
+    url: 'http://178.62.43.189/var/www/html/mainServer/insertVar.php',
     data: data,
     type: 'POST',
     success: function(msg){
      alert("Data sent successfully");
    }
     });
-     // xhr.open( "POST", url);
-     // data = new FormData();
-     // data.append(datafile,file);
-     // try {
-     //     xhr.send(data);
-     //     string = "Connected";
-     //   } catch (error) {
-     //      string = "Not connected";
-     //   }
-
 
 }
 

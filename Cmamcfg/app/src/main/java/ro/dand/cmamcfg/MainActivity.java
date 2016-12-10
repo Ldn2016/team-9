@@ -19,6 +19,15 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
 //        webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
         mWebView.setWebViewClient(new WebViewClient());
-        mWebView.loadUrl("file:///android_asset/index.html");
+        mWebView.loadUrl("http://178.62.43.189/android_app/cmam/index.html");
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(mWebView.canGoBack()) {
+            mWebView.goBack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

@@ -13,7 +13,8 @@
 					<div class="panel-body">
 						<a href='performance.php'><h2>Performance</h2></a><br>
 						<a href='admissions.php'><h2>Admissions</h2></a><br>
-						<a href='discharges.php'><h2>Discharges</h2></a>
+						<a href='discharges.php'><h2>Discharges</h2></a><br>
+						<a href='worstPerforming.php'><h2>Worst Performing</h2></a>
 					</div>
 				</div>
 			</div>
